@@ -1,0 +1,79 @@
+---
+# Lecture 2
+Finite Strategic Form:
+ - "N = {1,...,n} of players"
+ - "S_i = {1,...,m_i} pure strategy for player i":
+  - enumerates possible actions/strategy, i.e. one move game
+ - S = S_1 x ... x S_n set of possible combs of pure strategies
+ - u_i : S -> R, utility u_i(s_1,...,s_n) to player i under combination of strategies
+Mixed Strategies:
+ - x_i is dist over S_i
+ - x_i = (x_i(1), ..., x_i(m_i))
+ - sums to 1
+ - uses randomness to decide which strategy to play
+ - X_i is set of mixed strategy for strategies for player i
+ - X = (X_1 x X_2 x ... x X_n) is all possible combs, or profiles, of mixed strategies
+Expected Payoff:
+ - x(s) := \product{j=1}{n} x_j(s_j)
+ - U_i(x) := \sum{s \in S} x(s) * i_i(s):
+  - expected payoff for player i under mixed stratgy profile x \in X
+ - assumption:
+  - everyone is trying to maximise their expected payoff U_i(x)
+  - may not be true, risk takers, risk averse etc.
+Notation:
+ - pure strategies:
+  - x_i PURE if one hot vector
+  - picks exactly one strategy
+  - denoted by \pi_{i,j}
+ - everybody else's strategy:
+  - x_{-i}
+ - new profile with y_i:
+  - (x_{-i}; y_i)
+Best Response:
+ - U_i(x_{-i}; z_i) \geq U_i(x_{-i}; y_i)
+ - z_i is best response
+ - if you could cheat you would pick z_i
+ - Nash Eq:
+  - everybody is playing strategy that is best response to everybody elses
+Mixed Nash Equilibrium:
+ - if x_i is best response for all i
+ - PURE if x_i == \pi_{i,j}
+ - Nash's Theorem: EVERY FINITE n-PERSON STRATEGIC GAME HAS A MIXED NASH EQUILIBRIUM
+# Lecture 3
+Brouwer Fixed Point Theorem:
+ - "Every continuous function f: D -> D mapping mapping a compact and convex, nonempty subset D \in R^m to itself has a fixed point, i.e. the is x* \in D s.t. f(x*) = x*"
+ - The set of profiles X is a compact and convex subset of R^m
+ - m = \sum{i=1}{n} m_i
+ - m_i = |S_i|
+ - crumpled sheet experiment: 2d case
+ - deep and important proof of topology
+ - proof outside scope of course
+ - proof:
+  - "[Milnor’66] (Differential Topology). (uses, e.g.,
+Sard’s Theorem)"
+  - "[Scarf’67 & ’73, Kuhn’68, Border’89], uses
+Sperner’s Lemma."
+  - "[Rotman’88] (Algebraic Topology). (uses
+homology, etc.)"
+  - "[D. Gale’79] , uses the fact that HEX (a finite,
+extensive form game of perfect information, reinvented
+by Nash) is a “win-lose” game, i.e.,
+any n-dimensional Hex game has a winner (i.e.,
+can not end in a draw)"
+Proof of Nash's Therorem:
+ - "define f : X -> X"
+ - if f(x*) = x* then x* = (x*_1, ..., x*_n)
+ - fixed point <--> Nash Eq
+ - Claim:
+  - x* is NE iff: U_i(x*) \geq U_i(x*_{-i};\pi_{i,j})
+  - forward direction obvious proof
+  - U_i(x*{-i};x_i) = \sum{j=1}{m_i} x_i(j) * U_i(x*_{-i};\pi_{i,j})
+  - i.e. payoff for i is weighted average of payoffs of it's pure strategies
+  - if ineq holds then:
+   - U_i(x*) \geq U_i(x*_{-i}; x_i) for all x_i
+   - because weighted average of things no bigger than U_i(x*) cannot be bigger the U_i(x*)
+  - hence x*_i  is best response strategy to x*_{-i}.
+  - hence x* is a Nash Equilibrium
+Unilateraliy:
+ - if everyone stays the same and only you change
+...

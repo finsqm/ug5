@@ -1,0 +1,54 @@
+---
+# Lecture 3
+Already proved:
+ - a profile x* is NE iff:
+  - for every player and pure strategy the expected payoff of switching to that pure strategy will be less than staying with the mixed strategy x_i
+Further:
+ - let:
+  \phi_{i,j} = max (0, U_i(x_{-i};\pi_{i,j} - U_i(x)))
+Note:
+ - now going to stop taking math notes, all in slides
+ - going to note intuitive points made in lectures
+f:
+ - how behave in real world
+ - assign weights
+ - learn payoffs
+ - maps profile of mixed strategies to profile of mixed strategies
+ - profile is prob dist
+ - By brouwer, there exists x* s.t. f(x*) = x*
+ - hence x* is a fixed point of this function
+ - have to prove the \phi_{i,j} is equal to zero
+ - show that zero for one j
+ - then zero for all j
+Corollary:
+ - If in NE:
+  - every player, if they unilaterally change to strategy they play with +ve probability they would be no better off
+  - that new switch is not a NE
+Remarks:
+ - Proved exists, now have to find it
+ - Start with 2-player zero sum games
+Zero Sum:
+ - I win = You lose
+ - Solve with Linear Programming
+Applications in Biology:
+ - John Maynard Smith
+ - Evolutionary Stable Strategy
+ - Mixed strategies used to model %s in population that exhibit different behaviours
+ - Aggressive pigeons
+ - Extra Reading Straffin (1993): 
+  - amusing introduction
+ - behaviours affect each other's survival
+ - in evolutionary equilibrium if no mutant strategy could invade and take over
+Symmetric:
+ - strategy space is the same
+ - game looks the same from point of view of both players
+ - not every symmetric game has ESS
+ESS:
+ - x1* is best response to itself
+ - different best response is worse off against itself
+Pareto Optimal:
+ - No other profile that will increase one player's payoff without decreasing other peoples
+Prisoner's Dilemma:
+ - Shows NE need not optimize social welfare, nor be Pareto Optimal
+ - Coop, Coop give better payoff to both but Defect, Defect is also NE
+...

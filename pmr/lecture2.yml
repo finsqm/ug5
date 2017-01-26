@@ -1,0 +1,83 @@
+---
+# Lecture 2
+Markov Blanket:
+ - Examples:
+  - Yawning lecture theatre
+  - Cars in traffic
+ - Think of items in a connectivity graph
+ - Direct interaction is local
+ - Def:
+  - Var in system
+  - A small set of others vars exist s.t.:
+   - If their states are known, no other info can be gained by looking at other states
+Factor Graphs:
+ - $P(x) = 1 / Z exp(-E(x))$
+ - Any prob dist can be written like this ^
+ - Z norm const
+ - Probs dist but be +ve and sum to one
+ - E can be additive in a number of diff components. Components could be identical
+ - $P(x) = 1/Z exp(\sum{i=1}{N_f}\phi_i(x))$
+ - often:
+  - \phi_i(x) = \phi_i(x_{Ci})
+  - x_{Ci} is a subset of x
+ - equivalent: $P(x) = 1/Z \product{i=1}{N_f} \phi_i(x_{Ci})$
+ - motivation:
+  - Independent vars, conditioned on functions of them. Chain rule.
+  - exponential family dists:
+   - $P(x) = 1/Z exp(\sum{i=1}{N_f} w_i \phi_i(x))$
+Building Factor Graphs:
+ - Bipartite graph of vars and factors
+ - factors connected to vars in their collection
+ - \phi are the factors
+ - x are the vars
+ - fully connected is valid but useless
+ - not unique
+ - factors square boxes
+ - vars circle nodes
+ - remember factor are multiplied not summed
+ - no point adding new factor that is subset of other factor in terms of vars
+- Examples:
+ - first: easy, three terms seen
+ - second: factor for each pair of xs
+ - third: chain + vs, very markovy, hmm
+Special Case:
+ - Chain Rule!
+ - Conditional dependencies cause removed edges
+ - interested in structure
+ - structure/graph -> numbers/actual dists
+ - restriction is good
+Special Graphs:
+ - Chain Graphs
+ - Tree Structured Networks:
+  - no cycles
+  - include chains
+  - make life easier
+ - Tree structured Factor Graph:
+  - factor graph with tree structure
+ - Directed Factor Graph:
+  - If factor takes form: $P(x, y | r, s)$
+  - directed edges:
+   - r,s -> factor
+   - factor -> x,y
+ - Mixed Graphs too
+Independence:
+ - $ P(x,y) = P(x)P(y) $
+Claim:
+ - Two vars a cond indep given a set of cond vars if all paths connecting the two vars are blocked
+ - blocked:
+  - one var in path is in conditioning set
+  - one var of factor in path has two incoming edges that are part of the path
+Minimal:
+ Op 1:
+  - take any factor
+  - split into factor that contains fewer nodes
+ Op 2:
+  - assimilation
+ If can't do either then minimal
+Uses:
+ - True Skill:
+  - Matchmaking in xbox games
+  - models skill and uncertainty in skill
+  - Outcome of game is binary node rv
+  - can be modelled with fg
+...

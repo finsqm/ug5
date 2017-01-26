@@ -1,0 +1,72 @@
+---
+# Lecture 1
+Admin:
+ - Lecturer: 
+  - name: Subramanian Ramamoorthy
+  - email: s.ramamoorthy@ed.ac.uk
+ - TA:
+  - Svetlin Penkov
+ - Assessment:
+  - HW1:
+   - Out: 3 Feb
+   - Due: 17 Feb
+   - 10%
+  - HW2:
+   - 10%
+  - Exam:
+   - 80%
+ - Book: Sutton & Barto, Reinforment Learning, 2nd ed
+ - Language: MATLAB probably
+Lecture:
+ - Learning from interaction to achieve goal
+ - Informed by learning in humans:
+  - Baby playing with no teacher
+  - Sensorimotor connection to environment
+ - Applications:
+  - Self Driving Car
+  - Conversation Bot (NL Dialogue System)
+  - Robotics
+ - History:
+  - Computational Studies: 
+   - SNARC, (Minsky 1950)
+   - MENACE, BOXES, (Michie 1960s)
+  - Psychology:
+   - Selectional:
+    - Try alternatives and pick
+   - Associative:
+    - link alternatives with situations
+  - 70s and 80s:
+   - Klopf
+   - Sutton
+   - Barto
+   - Getting results from env vs supervised learning
+  - Sochastic Optimal Control
+ - Unifying perspective:
+  - Sequential Decision Making
+  - Sochastic optimization over time
+ - Structure:
+  - Env -> Perception -> High Level Goals
+  - Env <- Action <- High Level Goals
+ - Decisions:
+  - How to model?
+  - Who makes them?
+  - Conditions?:
+   - Certatinty
+   - Risk
+   - Uncertainty
+  - If Certain: 
+   - Given set of actions A
+   - Choose one that maximises given index f
+   - Problem: $ Find a_* \in A, s.t. f(a_*) > f(a) \forall a \in A $
+   - f properties:
+    - Transitive
+    - Ordinal
+  - If Risk:
+   - Gamble has n outcomes, worth $a_1, ..., a_n$
+   - probs $p_1, ..., p_n$
+   - how much is gamble worth?: $b = \sum{i}a_i p_i$
+ - Summary:
+  - RL about making choices, mostly in uncertain world
+  - solution:
+   - iterative and approx. algorithms
+...

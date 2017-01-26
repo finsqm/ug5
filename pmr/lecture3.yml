@@ -1,0 +1,55 @@
+---
+# Lecture 3
+FGs to dist:
+ - each factor a function (potential) of vars connected to
+ - remember 1/Z
+ - constraint:
+  - factors non neg
+ - directed edges:
+  - always prob dist
+  - conditional
+  - already normalised
+ - undirected:
+  - don't write P(.)
+  - should be \phi(.)
+Building FGs:
+ - Think in terms of connectivity
+ - Determine cond dependence relationships
+ - Describe system
+ - Decorating example
+ - Semi-causal way
+ - Imagine:
+  - indep rvs
+  - things care about are combination of rvs 
+  - sofa and arm chair chosen together
+Cond Indep:
+ - write: I(x,y | z):
+  - x and y are indep given z
+ - each var must appear on right or left not both
+ - cond indep means can drop from RIGHT side
+Blocking:
+ - Cond 1:
+  - One of vars in path in conditioning set
+ - Cond 2 (HEAD TO HEAD):
+  - One of vars OR factors in the path has two incoming edges that are part of the path, and neither the var NOR ANY OF IT'S DESCENDANTS are in the conditioning set
+ - Paths are not directed:
+  - when building paths ignore arrows
+Inference:
+ - related to learning
+ - If know prob model: how do we use it?
+ - want answers from it
+ - Questions:
+  - if x,y happens then what happens to z
+ - P(z | x, y) = \sum{other} P(z, other | x, y)
+ - have to marginalise over other vars
+ - given prob model, want marginalized cond dists
+Quote of the day:
+ - You're in Edinburgh, you're foolish and you're planning a bbq
+ - Very little probability of having fun in Edinburgh
+Problem:
+ - Marginalizing is hard
+ - Normalizing also hard
+ - All them big sums
+Marginalizing in FGs:
+ - replace marginalized vars with new factor
+...

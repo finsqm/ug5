@@ -1,0 +1,107 @@
+---
+# Lecture 3 (two on paper)
+Q&A / Admin:
+ - none set up
+ - set up later this week
+ - 2nd assignment will be substantial
+ - plays two / three games
+ - 1st assignment scaled down version
+ - whole thing in python 
+Technical Qs from last time:
+ - Optimistic Init:
+  - trying to explore to get enough info about dist
+  - then exploit
+  - unless pose in specific ways then hard to generalize
+  - need heuristic
+  - optimistic init is good heuristic
+  - forces you to look at states you haven't already looked at
+ - stationary / non stationary:
+  - exploration is complete after some time in stationary
+  - transient benefit
+Gittins Index:
+ - look for time t when index is max
+ - future is discounted by an exp discount factor
+Markov Decision Process:
+ - modification of markov chain
+ - intuition:
+  - world consists of states you're in
+  - addition of actions to the system
+  - condition on state and action to find probs
+ - peculiar effect:
+  - might not add up to one?
+  - actions determine probs
+ - reward condtioned on:
+  - current state
+  - previous state
+  - action
+ - transition conditioned on:
+  - state
+  - action
+Recyling Robot:
+ - example on MDP in slides
+ - alpha and beta are probabilities
+ - states:
+  - high
+  - low
+ - actions:
+  - wait
+  - search
+  - recharge
+ - action has result with probability
+ - each result has reward associated with it
+Notes to q in class:
+ - most problems in class will be uncertain
+ - need stochastic process
+ - so MDP helpful
+ - start out knowing probs and making inferences
+ - will then have to learn probs later in class
+ - if action not possible from state then p(s' | s, a) = 0
+Primer on MDP / MC:
+ - Stochastic Process:
+  - indexed collection of rvs 
+ - can be indexed by time
+ - time can be discrete
+ - system in states
+ - rvs can depend on other rvs
+ - Markov Chains:
+  - Markov assumption:
+   - enough to know where you and where you're going
+  - transition probability
+  - stationary if transitions are time invariant 
+  - can have n-step transition probabilities
+  - MC if:
+   - Finite number of states
+   - markov property
+   - stationary transitions
+   - set of init probs
+  - n-step obtained recursively:
+   - P^2 = P . P
+  - First Passage Time:
+   - number of transitions to go from i to j the first time
+   - if i = j, recurrence
+   - in general rv
+   - f
+  - recurrance is a way of asking questions about exploration
+  - f is non-neg in fixed state space
+  - P is transition matrix
+  - each row in P must add to one:
+   - for each state must have to go somewhere
+  - steady state P^n for higher enough n, rows start to become equal
+  - reciprocal of steady state prob is recurrence time
+ - Policy: way of computing actions
+ - Reward could be given to either action or state or action from specific state
+ - Want to find average cost of policy
+ - find steady state:
+  - solve linear equations
+  - find eigenvectors
+ - expected cost is sum over costs, weighted on steady state probs
+ - each policy defines transtion matrix
+ - above will lead to dynamic programming
+Policy:
+ - program
+ - map from states -> actions
+ - prob dist over states and actions
+MDP:
+ - can be viewed as Bayes Net
+  
+...

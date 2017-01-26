@@ -1,0 +1,115 @@
+---
+# Lecture 1
+Admin:
+ - TAKE NOTES
+ - all examinable
+ - Assignment 1:
+  - 25/03
+  - 12.5%
+  - derivations
+ - Assignment 2:
+  - 4/04
+  - 12.5%
+  - class papers
+ - Don't need background in neurobio
+ - Readings:
+  - Theoretical Neuroscience, Dayan and Abbott 2001
+  - Neuronal Dynamics: http://neuronaldynamics.epfl.ch/
+  - "Information Theory, Inference & Learning Algs, MacKay": http://www.inference.phy.cam.ac.uk/itila/book.html
+  - Introduction to The Theory of Neural Computation Vol 1, Hertz
+  - More cited
+  - For ref, different explanations, no course book
+Lecture:
+ - Aims:
+  - How brain computes
+  - How neuroscience can inspire technology
+  - Boltzmann Machines from brain
+  - How CS -> Neuroscience
+ - Other courses:
+  - NC: wider intro, less maths, more bio
+  - CCN: cognition and coding, high level
+  - MLPR: Pure ML (obviously)
+ - Course Outline:
+  - Comp methods for better insight into neural coding and computation:
+   - Neural code is complex
+   - Data Collection is getting better
+  - Biologically inspired algorithms and hardware:
+   - Primarily neural networks
+ - Topics Covered: 
+  - Neural coding:
+   - encoding
+   - decoding
+  - Statistical models:
+   - modelly neural activity
+   - ML
+  - Unconventional Computing:
+   - Dynamics
+   - Attractors
+ - Linker (1998):
+  - Organizing principles:
+   - that explain how a perceptual system develops and functions
+   - that can infer detailed experimental info
+   - lead to experimental programs
+ - Real Neurons:
+  - fundamental unit of nervous system
+  - very diverse
+  - serve different functions
+  - there are redundent elements
+  - Nucleus:
+   - genetic info
+  - Soma:
+   - cell body
+   - cell function
+  - Dendrites:
+   - collect info from other neurons
+  - Axon:
+   - can be very long (metres in girraffe)
+   - transmits signals to other neurons
+  - Potential difference between inside and outside cell:
+   - 0           -
+   -          --- -    -
+   - -60 -----     -  - ---------
+   -                -
+   -          action potential
+   - neuron functions when inputs exceed threshold
+  - Synapses:
+   - contact points between neurons
+   - excitory:
+    - increases potential in others
+   - inhibitory:
+    - decreases potential in others
+   - typically weak
+   - need lots of inputs
+   - spiking is sparse: once a second
+   - modelled by poisson process
+   - noisey, not reliable
+   - auditory system is an execption, quite precise
+   - can discretise time, bins
+   - or spike rate, rate code
+   - not neccessarily linear summations, not for purposes of this course
+   - each neuron can have up to 10^5 synapses
+   - synapses can get stronger or weaker:
+    - memory
+    - plasticity
+- Assumptions:
+  - ignore biophysics of neurons
+  - ignore non-linear
+  - spikes modelled as rate-modulated random processes
+  - ignore biophysical details of plasticity
+  - implications:
+   - might be info hidden in the details
+   - but need to make experiments tractable
+   - details definitely not neccessary for ML
+ - Human Brain Project:
+  - trying to simulate chunk of human brain
+ - Recent Developments:
+  - Able to record large numbers of neurons at a time now 
+  - Computational Hardware:
+   - parallel hardware and algs, some brain inspired
+  - ML
+ - Ref:
+  - Furber, S. B., Galluppi, F., Temple, S., and Plana, L. A. (2014).
+  - Le, Q. V., Ranzato, M., Monga, R., Devin, M., Chen, K., Corrado, G. S., Dean, J
+,and Ng, A. Y. (2012).
+  - Stevenson, I. H. and Kording, K. P. (2011)
+...

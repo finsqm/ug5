@@ -1,0 +1,101 @@
+---
+# Lecture 2
+Neural Encoding:
+ - World -encoding-> Brain
+ - Brain -decoding-> World
+ - Overview:
+  - Encoding: Predict neural response to stimuli
+  - Decoding: Homunculus
+  - Measuring info rates
+ - Neural Code:
+  - Translation problem
+  - one-to-many & many-to-one
+ - Stimulus-response relation:
+  - resonse r
+  - stimulus s
+  - s:
+   - synaptic input / sensory stimulus
+  - responses are noisey
+  - supervised learning problem
+  - High dim
+  - Non-linear:
+   - but weak non-linearity
+   - parametric non-linear model?
+   - series expanstion?
+  - Assume causality and stationarity (system remains the same)
+  - Excludes Adaption
+ - Response:
+  - spikes
+  - stochastic
+  - predict r not spikes
+  - methods to estimate most accuracte histogram of data
+ - Retina:
+  - On-centre off-suround
+  - vice-versa
+  - receptive fields
+ - V1 cell response types:
+  - simple
+  - Gabor functions
+  - other pathways - auditory
+  - still visual
+ - Visual system kind of linear
+ - other cells much more complex
+ - face recognition not linear
+ - In higher areas the RF is not purely sensory:
+  - e.g. memory recognition
+ - Roadmap:
+  - Volterra and Wiener expansions
+  - Spike triggered avg & cov
+  - Linear-nolinear-Poisson
+  - Integrate & fire and Gen Line
+  - Networks
+ - Thermometer:
+  - temp T
+  - r = g(T)
+  - r in cm of mercury
+  - g(T) is monotonic, g^-1(r) probably exists
+  - could be somewhat non-linear
+  - could be noisey
+  - will not be instantaneous
+  - r(t) = g (\integral T(t')k(t - t') dt')
+  - linear filter
+  - convolution with kernel k
+  - T * k === \intergral T(k')k(t - t')
+  - Note, if k(t) = \delta(t):
+   - r(t) = g(T(t))
+  - g is non-linearity
+ - Volterra Kernels:
+  - Taylor expansion of non-linearity
+  - have to include temporal response
+  - r(t) = h0 + \integral{0}{\inf} d_t1 h1(t1)s(t- t1) ...
+  - Taylor series with mem 
+  - hope that:
+   - lim t_i -> \inf hk(t_i) = 0
+   - hk is smooth
+   - hk is small for large k
+ - Noise and Power Spectra:
+  - at each timestep draw an indep zero-mean gauss sample
+  - <> = expectation notation
+  - maths and derivations on webpage
+  - 3rd moment of zero mean gauss is zero (skew)
+ - Wiener Kernel:
+  - rearrangment of volterra
+  - uses gauss noise
+  - Estimating Wiener Kernels:
+   - stimulate with gauss white noise
+   - g0 is mean
+   - g1 is function of tau = correlation between stimulus and response
+   - g2 is 3rd order correlation between reponse and two points on stimulus
+  - advantages:
+   - expansion terms are indep
+   - i.e. quadratic term wont affect linear term
+  - Remarks:
+   - prediced rate is not guarenteed > 0
+   - post-hoc validation for excluding higher powers
+   - averaging and ergodicity:
+    - want to average over realizations of the system
+    - instead of just over time
+    - not easy to ensure
+Summary:
+  - developed way to predict response of neuron to input
+...

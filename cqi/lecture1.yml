@@ -1,0 +1,87 @@
+---
+# Lecture 1
+Notes: http://www.inf.ed.ac.uk/teaching/courses/cqi/1-categories.pdf
+Admin:
+ - Tutorials:
+  - 0%
+  - 2nd half of 2nd lecture
+ - Coursework:
+  - 30%
+  - Week 4
+ - Exam:
+  - 70%
+ - Book: 
+  - Introduction to Categorical Quantum Informatics
+  - Unpublished
+Lecture:
+ - Semantics:
+  - Denotation: 
+   - "[[P]]"
+   - Algorithmic level
+   - Correctness
+   - "Programs -- [[-]] --> Mathematical Objects"
+   - Motivation:
+    - Programmers intuition
+    - Justify/refute/suggest program transformations
+    - Understand the underlying mathematics of programming
+  - Operational: 
+   - Implentation
+   - Efficiency
+  - Quantum:
+   - Like P as exectuable
+   - Black box
+   - Can analyse information flow
+   - No cloning theorem
+   - No deleting theorem
+   - How to do recursion?
+   - Design:
+    - Semantics will inform programming language
+    - But really "Semantics = Programming Language"
+ - Categorical Semantics:
+  - Compositionality: "[[F; G]] = [[G]] o [[F]]"
+  - Concurrency: "[[F while G]] = [[F]] tensor [[G]]"
+  - Recursion: "[[F(X)]] = [[F]] ([[X]])"
+  - Posibilities:
+   - Lambda Calc
+   - Partially Oredered Sets
+   - Categories
+  - Category Theory: Way of thinking more than deep theorems
+  - Monoidal Categories: Has a graphical calculus
+ - Categories:
+  - Objects: "A, B, C, ..."
+  - Morphisms: "A --f--> B going between objects"
+  - Examples:
+   - Phyiscal systems
+   - Data Types & Algorithms
+   - Algebraic/Geometric Structures
+   - Logical Propositions
+  - Morphisms more important than objects
+  - Definition:
+   - a collection Ob(C) of objects
+   - for every A and B, a collection C(A,B) of morphisms, f in C(A,B)
+   - a composite for every morphism
+   - for every object an identity morphism
+   - such that:
+    - Associative: $ h o (g o f) = (h o g) o f $
+    - Identity: $id_B o f = f = f o id_A$
+  - Sets and Functons:
+   - Category SET of sets and functions:
+    - objects: sets
+    - morphisms: functions
+    - composition: a -> g(f(a))
+    - identity: a -> a
+   - Relations:
+    - Def: A -R-> B is a subset R in A x B
+    - Can be composed
+    - Can be written as (0,1)-valued matrix
+    - composed with matrix mulptiplication with OR as +
+    - Category REL of sets and relations:
+     - objects: sets
+     - morphisms: relations R in A x B, (a,b) in R written aRb
+     - composition of R and S: "{(a,c) in A x C | every b in B : aRb,bSc}"
+     - identity: "{(a,a) in A x A | a in A"
+     - like HILB
+   - SET for classical physics
+   - HILB for quantum physics
+   - REL in the middle
+...

@@ -1,0 +1,79 @@
+---
+# Lecture 3
+- Weiner Kernels Discrete Time:
+ - Linear fitting problem / regression
+ - Least Squares
+ - Solve for Mean Squared Error
+ - Derivation on website
+ - psuedo inverse
+ - s_t : stimulus at t
+ - r_t : response at t
+- Fourier Transform in linear case:
+ - Transform to freq space
+ - g1 represents impedence of system:
+  - how much wiggle you need for output
+- Regularization:
+ - Try not to overfit
+ - punish fast fluctuations
+ - smooth prior
+- So far looked at temoral kernels
+- Spatio-Temporal Kernels:
+ - best response when something is moving
+ - diagonal path through x/t domain
+ - motion detectors
+ - doesn't respond to static stimulus
+- Higher-order:
+ - include higher order heads to more accurate estimates
+ - comes at cost
+- Spike Triggerd Average:
+ - whenever neuron is responding, look at stimulus
+ - just the linear kernel
+ - for linear systems, under constraint, optimum stimulus is prop to g_1(-t)
+- Membrane Potential:
+ - compare to underlying voltage
+- Spike Triggered Covariance:
+ - for higher order kernels
+ - matrix when neuron responded (for quad)
+ - symmetric
+ - hence eigenvectors are orthonormal basis
+- Simple Cell:
+ - linear filter + rectif
+ - visual system
+ - video with light bar, nobel prize
+ - V1
+- Complex Cells:
+ - "g1 = 0"
+ - not linear
+ - pools responses from simple cells + rectif
+ - XOR
+ - first term is G2
+ - STC:
+  - A: eigenvalues sorted by mag, want to see some pop out
+  - D: STA is basically zero
+- LNP models:
+ - Linear-nonlinear-posisson model
+ - more tailored to neuron system
+ - spiking and noisey
+ - common model
+ - linear filter (kernel) + non-linearity + poisson spiking
+ - n is non-lin:
+  - sig
+  - rectif
+ - if poisson process:
+  - not homogeneous, varies in time
+ - not bad approx in mammals
+ - test by plotting mean against var
+- Estimation of LNP:
+ - don't care about non-lin
+ - can still use STA if p(s) is symmetric
+ - if stimulus leads to certain kernel then also stimulus on other side
+ - symmetric response about k
+ - kernel is the same as lin kernel
+- Continous Case:
+ - Bussgang 1952
+- LNP results:
+ - caviat: time scales are fairly course
+- Trend:
+ - general system: works on any system
+ - more specific: better but less general
+...

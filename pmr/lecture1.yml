@@ -1,0 +1,65 @@
+---
+# Lecture 1 - Intro
+Prelimaries:
+ - Fridays second hour might not be used
+ - Tutorials start week 3
+ - Tutorials are VITAL
+ - Barber best book but not only
+ - Lecturer seems awesome
+ - Try and keep up
+ - Gets to the bottom of why ML works
+ - vectors are column vectors
+ - elements of dataset as superscript
+ - see notation sheet
+ - notation changes with book
+Assignment:
+ - recommend python/matlab/R but up to us
+ - more questions than programming
+Lecture:
+ - Point of Course:
+  - Unsupervised learning
+  - More about understanding the problem than MLPR
+  - Working in higher dim scenarios
+  - Predicting a number of things at once
+  - things aren't iid
+  - model covariance
+  - precise distributions
+ - Randomness:
+  - not why we use probabilities
+  - use for personal uncertainty and covariance
+ - Decorating:
+  - Choosing colour:
+   - P(sofa colour | got taste)
+  - Also dists:
+   - P(ligthing colour | carpet colour, carpet pattern, got taste)
+  - Course is about giving the dist of colours for a tasteful room
+ - Getting and using dists: 
+  - How do we choose structure and type of dist?:
+   - Modelling
+  - Where do we get them?:
+   - Learning
+  - How do we use them?:
+   - Inferences
+ - Inference:
+  - We know a prob dist -> ask questions / make decisions
+ - Learning and Modelling:
+  - Measurable:
+   - can observe
+  - Latent:
+   - can't measure but important
+  - Questions:
+   - about the system
+  - Learning and modelling combines these 3
+  - Prior beliefs -> Model and Prior dist
+  - Improve model my learning unknowns e.g. P(heads), theta
+ - Learning is the same as inference but at a different level
+ - Summary:
+  - Move beyond simple models to:
+   - many vars
+   - differnt dists
+   - appropriate dists
+  - answer questions with inference
+  - discover models from data with learning
+  - inference and learning the same
+- Do math questions on website for practice
+...
