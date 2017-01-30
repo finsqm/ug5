@@ -1,0 +1,76 @@
+---
+# Lecture 5
+Linear Programming:
+ - linear optimisation
+ - example:
+  - diet problem
+  - want to make sure get enough of m vitamins
+  - don't want to spend too much
+  - n foods available
+  - can buy fractional amounts of food
+  - use vars x_i to represent amounts of n foods
+  - minimise weighted sum c_j x_j
+  - or cTx
+  - contraint: 
+   - weighted sum a_i,j x_j >= b_i
+   - or Ax >= b
+  - think about problem geometrically
+  - ineqs denote areas in x space
+  - want to go as far as you can in direction of vector:
+   - perp to line we're maximising
+ - Def:
+  - input:
+   - f obj func
+   - opt criteria
+   - constraints C
+  - f:
+   - linear combination in x space
+  - opt:
+   - max
+   - min
+  - C:
+   - m inequalities
+   - const on right side
+ - Solving:
+  - v satisfies constraint if constraint is true under v
+  - v solution if satisfies every constraint
+  - C feasible if solution set is non-empty
+  - optimal solution:
+   - vector solution that max/minimises f
+  - may not be optimal solution
+ - Things that can go wrong:
+  - solution set is empty
+  - f is unbounded in solution set
+ - Note:
+  - no strict ineqs
+  - causes no optimal solution
+- 3 possible outcomes:
+ - infeasible
+ - feasible but unbounded
+ - optimal feasible solution exists
+- Irrational?:
+ - Nope, always rational solution
+- Simplified forms:
+ - mins can be made into maxs
+ - only need f = some var:
+  - add new var x0
+  - add f(x) = x0 to C
+  - optimize x0
+ - don't need eq constraints
+ - can make all vars non-neg
+ - only <= constraints
+inefficient alg:
+ - alg:
+  - iterate down removing vars by modifying constraints
+  - trivially find opt for last var x0
+  - plug back in to find other var values
+ - fourier-motzkin elimination
+ - generalisation of gaussian elimination (GE)
+ - in worst case:
+  - m^2^n constraints
+ - GE doesn't blow up
+Remarks:
+ - corollaries of f-m:
+  - three possible answers cover all possibilities
+  - solution is rational
+...
