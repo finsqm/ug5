@@ -1,0 +1,62 @@
+---
+# Lecture 4
+- Topics:
+ - 2-player zero sum games
+ - Minimax
+- Don't know how to compute NE yet
+- Iterate and hope it converges?:
+ - lousey
+2 player zero sum:
+ - predates theory of NE
+ - von neumann
+ - payoff sums to zero
+ - payoff viewed as matrix
+ - A2 = -A1
+ - player 1: row player
+ - player 2: column player
+Notation:
+ - matrix ineq hold for all values
+ - typically deal with column vectors
+Mixed Strategy:
+ - m1 dim vector x, for player 1 with m1 possible actions
+ - prob dist
+Expected Payoff:
+ - x1^T A x2
+Rock Paper Scissors:
+ - Can achieve expected payoff 0
+Minimax:
+ - maximise the worst thing that could happen
+ - imagine revealing mixed strategy to opponent
+ - player two is maxminimizing
+ - Note:
+  - if player 1 reveals strategy
+  - i.e. reveal x1*
+  - expected payoff will be less than or equal to player 2's strategy
+  - still less than or equal to if player 2 reveals
+  - von neumann showed actually equality
+  - only holds with optimum strategy
+Minimax Theorem:
+ - exists unique value v for game st:
+  - expected payoff to player 2 if playing j against x1* >= v
+  - vice versa <= v
+  - v is expected payoff when players are playing optimally (minimax)
+ - x* = (x1*, x2*) is NE
+ - v is 0 in fair game
+ - v is minimax value
+Proof:
+ - Uses Nash's Theorem
+ - original proof came before NE
+Remarks:
+ - Minimax profile and NE are same for 2pzs
+ - any strategy played with positive probabilities will achieve expected payoff v
+As optimization problem:
+ - maximise v
+ - constraints:
+  - expected value for p2 strategy j is >= v for all j
+  - player 1 strategy sums to one
+  - each prob in x is non neg
+ - solve with linear programming
+Note:
+ - still just one shot game
+ - normal form, not extensive form
+...

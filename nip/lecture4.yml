@@ -1,0 +1,96 @@
+---
+# Lecture 4
+- Encoding (still)
+IF:
+ - Integrate and Fire
+ - Better than LNP
+ - More precise spiking
+ - works better for high firing rates
+ - reset kernel: spike feedback
+ - as soon as spike fired, starts again
+ - leaky integrator
+ - more energy efficient
+ - combines:
+  - membrane current
+  - noise current
+  - in current
+Generalized Linear Model:
+ - least square fitting
+ - non linearity changes things
+ - f is now probability: not gaussian
+ - take log likelihood
+ - split on spiking bins and non spiking bins
+ - can replace with integral on second term
+ - still need regularisation
+ - more complez models exist but hard to fit
+Network Models:
+ - feed back to other neurons with coupling filters
+ - hard with large numbers of neurons
+ - paramterise coupling filter to constrain fitting
+ - coupling models correlations well
+ - spike at zero
+Summary:
+ - Weiner kernels
+ - Spike triggered Models
+ - LNP models
+ - IF models
+####################################################
+Decoding:
+ - response -> stimulus
+ - what info can be extracted from spike trains
+ - homunculus
+ - Hippocampus:
+  - encoding location
+Overview:
+ - Stimulus reconstruction
+ - spike train discrination
+ - Stimulus discrimination
+ - Population decoding
+ - Dynamic population decoding
+Spike Train Decoding:
+ - esptimate kernel from spike times
+ - can add delay
+ - Acausal Minimization:
+  - minimising squared error
+  - Q is cross correlation (kinda)
+  - implicit equation
+  - can also do in Fourier Space
+  - cannot design response, can design stimulus (e.g. gauss white noise)
+  - arbitrary kernel
+Causal Decoding:
+ - causal on-line decoding problem
+ - prediction of future simulus requires temporal correlation of the stimulus
+ - put kernels where the spikes are
+ - add together, easy peasy
+Higher Order Reconstruction:
+ - build library of spike patterns
+ - average stumulus that produced spike
+ - reconstruct with weighted sum of means
+ - combine in bayesian way
+Thats all for the spike train reconstruction:
+ - response given, can't model with white noise
+ - causality adds realism but reduces quality
+ - can be ill posed
+Spike Train Discrimination:
+ - how similar are two spike trains
+ - very high dim space
+ - number of spikes can vary
+ - Edit distance:
+  - two spike trains
+  - two processes to transform one to another:
+   - wiggle
+   - insert
+  - each has cost
+ - Convolve with exp kernel:
+  - l2 norm between convolved trains
+  - adds area under graph to compare
+Stimulus Discrimination:
+ - probabilistic
+ - stimulus given response
+ - first assume:
+  - s has two values
+  - r is 1 dim
+  - plot two gaussian likelihoods
+  - set threshold
+  - get trade off between FP and detection
+...
