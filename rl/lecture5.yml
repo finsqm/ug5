@@ -1,0 +1,68 @@
+---
+# Lecture 5
+Summary so far:
+ - MAB:
+  - one state
+  - number of actions to take
+ - MDP:
+  - MAB where each action takes to new MAB
+  - sequence of MABS
+ - Value Function:
+  - way to think about assigning value to states
+ - Value of state:
+  - sum over actions
+  - sum over possible next states
+ - optimal value:
+  - get rid of sum over actions
+  - max over actions
+ - policy evaluation:
+  - given policy
+  - what is V of policy
+ - policy:
+  - action specification
+  - strategy
+ - policy improvement:
+  - can I deviate from pi at any point?
+ - iterate:
+  - evaluation
+  - improvement
+  - evaluation
+  - improvement
+  - etc
+ - P: state transitions
+ - R: expected rewards
+Value Iteration:
+ - same as policy improvement but only do once
+ - can get policy even when V still oscillating
+ - computationally better
+###############################################
+Monte Carlo Methods:
+ - Don't have P and R
+ - Sampling based learning of model
+ - think through simulated traces, then approximate
+ - try to directly approximate value function
+ - Simple MC:
+  - depth first instead of breath first
+ - Monte Carlo Policy Evaluation:
+  - given number of episodes under pi contains s
+  - approx V^pi(s)
+  - loops in MDP:
+   - first visit
+   - every visit
+ - Monte Carlo Estimation of Action Values:
+  - approximate Q
+  - Monte Carlo Control:
+   - greedy improvement wrt state-value of action-value function
+###############################################
+Temporal Differencing:
+ - Q learning part of this
+ - update on-line
+ - instead of at end of episode
+ - incrementally learn value function
+ - TD(0): 
+  - simplest alg
+  - uses 1 step reward
+  - and discounted estimate of future reward
+  - have to anneal alpha to stop oscillations (lr)
+ 
+...

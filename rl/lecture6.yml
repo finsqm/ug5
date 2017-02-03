@@ -1,0 +1,25 @@
+---
+# Lecture 5
+Off-policy:
+ - Have seperate behaviour policy
+ - this policy should take you to severy state in the world
+ - use this to update an estimate policy that will be used in real cases
+Bootstrap:
+ - updates estimates of V based on other estimates
+ - TD & DP
+Samples:
+ - updates based on one path through state space
+ - TD & MC
+SARSA:
+ - state action reward state action
+ - Temporal Difference Learning
+ - exactly same but in terms of Q
+ - Q(s,a) is action values for policy pi
+ - on-policy
+Q Learning:
+ - modification on SARSA
+ - off-policy version
+ - only update with respect to best actions
+ - does worse on-line
+ - going to use for homework
+...

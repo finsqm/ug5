@@ -1,0 +1,19 @@
+---
+# Lecture 5
+Bayes Nets (Belief Networks):
+ - Directed Graph
+ - Thinking:
+  - tease apart direct and indirect causes
+ - Latent Var: hidden
+ - Starting Point: joint dist
+ - chain rule of probability
+ - dependent on n:
+  - encode with 2^n numbers
+  - if binary vars
+ - utilise cond indep
+ - Directed Acyclic Graph (DAG)
+ - Factor Graphs:
+  - 1 to 1 relationship between directed acyclic factor graph and BN
+  - multi input vars do lose some inf
+ - 
+...
