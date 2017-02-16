@@ -1,0 +1,125 @@
+---
+# Lecture 7 (missed two)
+Entropy Maximisation:
+ - treat neuron as trying to maximise entropy
+ - can be:
+  - uniform
+  - exponential:
+   - firing rate limited
+  - gaussian:
+   - fixed variance
+ - pick r = f(s):
+  - maximses entropy
+  - histogram equalization
+ - Time Varying Signals:
+  - information rate that synapse can translate
+ - for graded signals
+ - not spiking
+ - Spiking Neurons:
+  - how much info in spike train
+  - discretise
+  - 1 0 0 1 0 1 
+  - call it a response word
+  - max entropy if all words equally likely
+  - num words = Choose(n, n1)
+  - entropy is proporational to:
+   - number of bins
+  - more bins:
+   - more precision
+  - if lots of spikes and not many bins:
+   - low info
+  - Periodic Neuron:
+   - fire at fixed frequency
+   - prop to log bins
+  - Poisson neuron:
+   - linear in time
+  - Entropy:
+   - weighted sum over log probs
+ - Max Info Transition Single Output:
+  - two inputs
+  - combine two signals to maximise info
+  - post-synaptic noise
+  - makes easier to maximise info because indep
+  - trivial solution:
+   - make weights close to inf
+  - constraint:
+   - size of weight vector is one
+  - u is normal noise
+  - maximise variance:
+   - maximise entropy
+   - PCA
+ - Infomax:
+  - two outputs
+  - still with noise
+  - four weights
+  - prop to:
+   - log of det of correlation matrix
+  - optimisation is tedious but interesting
+  - under low noise:
+   - each neuron independent
+  - want to average out noise using both
+ - Estimating Information:
+  - in practise no P
+  - will typically overestimate entropy with not enough data
+  - way of working out whether correlation is causation
+  - kinda
+Information Theory Summary:
+ - Powerful
+ - Non parametric
+ - Strong biases in data analysis
+ - Opt depends on noise assumptions
+Retina Coding:
+- Normative Modelling of the Visual System:
+ - how should system behave
+ - information rate very high
+ - lots of correlations in visual world
+ - can predict neighbours
+ - redudancy in signal
+- Visual System:
+ - eyes
+ - retinas:
+  - centre surround
+ - primary visual cortex:
+  - simple cells
+  - indep component analysis
+ - V1:
+  - complex cells
+  - subspace ICA
+- Mutual Information:
+ - not so easy
+ - factorial coding
+- Decorrelation:
+ - of neighbouring retinal cells
+- second order statistics:
+ - correlations
+- Principal Component Analysis:
+ - substract mean
+ - assume linear
+ - find eigenvectors of correlation matrix
+ - scale according to eigenvalue
+ - decorrelates signal
+ - dim reduction:
+  - throw away e with loe eigenvalues
+ - on natural images:
+  - become periodic
+  - bit like fourier series in two dims
+- Whitening with PCA:
+ - decorrelation
+ - rotate
+ - then scale with inverse variance
+- Problems:
+ - if we measure receptive fields in retina they don't look like this:
+  - centre surround
+  - would need lots of positive negative wiring
+  - different parts are more important
+ - is this a good description of natural images?:
+  - sample PCA filters
+  - combines with gauss coefficients
+  - makes clouds, not natural images
+Fourier Phase Info:
+ - fourier transform
+ - every two images mix mag and phase
+ - phase information is better than amplitudes
+ - amps are second order statistics
+ 
+...

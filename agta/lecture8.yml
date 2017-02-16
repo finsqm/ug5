@@ -1,0 +1,57 @@
+---
+# Lecture 8
+LP Duality:
+ - Oh dear there's a proof in the coursework
+ - duals work with equalities too
+ - rules:
+  - non neg in primal (up to r):
+   - ineq in dual
+  - non neg in dual (up to d):
+   - ineq in primal
+  - equalities for unconstrained vars
+  - dual of the dual is the primal
+ - Minimax:
+  - maximise v
+  - st:
+   - v minus expected payoff for p1 under all pure strat for p2 is non-positive
+   - x is prob dist
+  - dual:
+   - maxminimiser for player 2
+  - optimal value of both LPs are the same
+  - LP duality theorem implies minimax theorem
+  - Minimax is also consequence of Nash's Theorem
+  - Hence can derive strong duality from Minimax theorem
+  - Proof:
+   - Consider 2p zero sum game
+   - B:
+    - block matrix (contains smaller matrices) from slides
+   - symmetric zero sum game
+   - this game is the same for both players
+   - -B^T = B
+   - value of game is zero
+   - every minmaximiser is a maxminimiser
+   - Consider:
+    - symmetric minimax profile
+    - symmetric NE
+    - both players playing same strategy
+    - ends with constant z
+   - Suppose:
+    - z > 0
+   - feasible solutions for primal and dual pop out
+   - Claim:
+    - if feasible solutions for both then z +ve
+    - use Farkas Lemma
+ - Farkas Lemma:
+  - see slides
+  - one direction is easy:
+   - results in 0x < 0
+ - Significane of LP duality: 
+  - combinatorial optimization
+  - mathematics economics
+  - helpful to construct dual in real life situations
+  - optimise real economic counter goal
+  - duality in algs:
+   - NP and co-NP
+  - gives bounds for integer LP
+  -  
+...

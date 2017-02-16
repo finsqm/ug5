@@ -1,0 +1,16 @@
+---
+# Lecture 7 (missed 6 - simplex)
+LP Duality:
+ - can write primal LP in matrix form
+ - adversary wants to minimise bound on LP
+ - x feasible solution to primal LP
+ - y feasible solution to dual LP
+ - Strong Duality:
+  - optimal solutions are equal between primal and dual
+  - weird!
+  - LPs are in different dimensions
+ - Complementary Slackness:
+  - optimal iff:
+   - for each primal constraint:
+    - equality or var = 0
+...

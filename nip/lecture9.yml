@@ -1,0 +1,75 @@
+---
+# Lecture 9 - missed a lot
+Neural Networks and Visual Processing:
+  - Perceptron:
+    - Good model for Cerebellem
+    - Cerebellem:
+      - Big Neurons
+      - Motor System
+      - Big Parallel fibres
+      - Error signal:
+        - climbing fibre for reporting errors
+      - Experiments:
+        - Eye Velocity vs retinal slip
+        - very fast
+        - move head, eyes move to stay in same spot
+        - perceptron learning models well
+    Limitations:
+      - XOR (of course)
+      - Problem has to be linearly seperable
+  - MLP (Multi Layer Perceptron):
+    - Now is becoming a neural net
+    - Learn with backprop
+    - Hurray, finally something I already know
+    - SGD
+    - Regularize with L2
+    - More layers do not add any more theoretical power but work well in practice
+  - Auto Encoders:
+    - Make input same as output
+    - find efficient representation of input
+    - fewer hidden units than input
+  - Backprop in Biology:
+    - 2 phase learning
+    - Adds feedback weights
+  - Convolutional Networks:
+    - Fukushima
+    - Share Weights
+    - HMAX:
+      - Simple Cells
+      - Complex Cells
+      - Retina stuff
+      - Conv and max pool
+      - Max pool:
+        - nice way to get invariances
+      - no learning between layers
+    - learning problems become easier in high dim space:
+      - lots of cells
+      - basically cheating
+  - Learning Invariances:
+    - Hard code
+    - Supervised Learning
+    - use temporal continuity of world:
+      - Trace Rule
+      - fitler output based on time
+    - Slow Feature Analysis:
+      - Minimize derivative of output
+      - translation invariance biology approach
+    - Altered Visual World:
+      - Rhino allows follows dog
+      - NN learns this
+  - Top Down Interactions:
+    - Feedback connections
+    - Nose detector fires, but where is the nose?
+  - Recurrent Neural Networks:
+    - Dynamic
+  - Liquid State Machines:
+    - Interconnected Networks
+    - Random Connections
+    - Weights on outputs
+    - lots of computational power
+    - Maass et al 2002
+    - Optimal Reservoir?:
+      - Golden middle ground
+      - Between ordered and chaotic
+    - Related to SVM
+...
