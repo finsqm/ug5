@@ -1,0 +1,67 @@
+---
+# Lecture 10 - Didn't take notes last time
+Computing Nash Equilibria:
+  - First Strategy:
+    - Algorithm:
+      - Guess Support Sets
+      - Check is corresponding LP has feasible solution
+      - if so STOP, feasible solution is NE
+    - Exponential time (not space)
+    - Can be modified to find NE that maximises social welfare:
+      - add maximising sum of payoffs to constraints
+      - works for any notion of good
+    - shows:
+      - finding an NE is in NP
+    - alg is not likely to get lucky, not like simplex
+    - want more simplex like alg
+    - rest of lecture is culmniation of all tools learned so far
+  - Towards Alg for 2 players:
+    - Can always make payoff matrices positive, add constant to all values.
+    - This will change zero sum game to a constant sum game, very similar
+    - Use slack vars to get new characterisation of NE
+    - either slack is zero or playing pure strat with probability zero
+    - this gives us constraints for an LP
+    - complementarity conditions is equal to says that slack and x are orthogonal
+    - payoffs w can be elimanated:
+      - must be positive (A and B > 0)
+      - divide both equation by payoff w
+    - if one of x prime is non-zero then both are non zero:
+      - linked together by complementarity conditions
+    - can get ws back by normalising probability dists
+    - can combine the two equations with M equation, block notation
+    - instance of Linear Complementarity Problem
+    - Trivial Solution:
+      - u is all zeros, v is all ones
+      - not sufficient, x primes must be non-zero
+    - We have feasible dictionary with v as basis
+    - pivot away from u = zero
+    - complementarity stops this being straight forward LP
+  - Lemke-Howson Algorithm:
+    - alg will walk towards complementary basis
+    - start at BFS u = 0, v = 1
+    - for some i:
+      - take u_i and move into basis
+      - this is i-almost-complementary
+      - move some v_j out of basis (with suitable pivoting rules / degeneracy conditions this is uniquely determined)
+      - move u_j back in
+    - STOP condition:
+      - found new complementary basis & BFS
+      - NE found by normalising
+    - graphical argument:
+      - starting bogus BFS has degree one
+      - all other nodes have degree two or one
+      - walk down path until arrive ot other 1
+      - then found NE
+    - Finding 'good' NE is NP-hard (max social welfare)
+  - Games with > 2 Players:
+    - not sensible to talk about exact NE, some probs can be irrational
+    - Two definitions of approx NEs:
+      - epsilon-NE:
+        - epsilon-close to payoff in true NE
+      - epsilon-close:
+        - difference in x is < epsilon
+    - NE for 2-players and epsilon-NE for > 2-players are reducible to each other
+    - epsilon-close is much harder:
+      - upper bound is in PSPACE
+      - equivalent to finding fixed point for any algebraic brouwer functions
+...
