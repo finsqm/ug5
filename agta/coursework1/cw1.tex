@@ -21,7 +21,37 @@
 % longtable does better format for tables that span pages
 \usepackage{longtable}
 \usepackage{mathtools}
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+      backgroundcolor=\color{backcolour},   
+          commentstyle=\color{codegreen},
+              keywordstyle=\color{magenta},
+                  numberstyle=\tiny\color{codegray},
+                      stringstyle=\color{codepurple},
+                          basicstyle=\footnotesize,
+                              breakatwhitespace=false,         
+                                  breaklines=true,                 
+                                      captionpos=b,                    
+                                          keepspaces=true,                 
+                                              numbers=left,                    
+                                                  numbersep=5pt,                  
+                                                      showspaces=false,                
+                                                          showstringspaces=false,
+                                                              showtabs=false,                  
+                                                                  tabsize=2
+                                                                }
 
+
+                                                                
+                                                                
+                                  \lstset{style=mystyle}
 \begin{document}
 % this is an alternate method of creating a title
 %\hfill\vbox{\hbox{Gius, Mark}
@@ -213,5 +243,54 @@ Hence player 2's optimal strategy is $x^*_2 = (0.5556,0.2778,0,0,0.1667)$.
 The unique NE of the Matching Pennies game is given by $x^* = [(0.5,0.5),(0.5,0.5)]$
 
 \subsection*{(b)}
+
+The experimental method was chosen for showing (but not proving) that the statistical mixed profile of this game approaches the above NE.
+
+The tie breaking rule used was an arbitrary artifact of the implementation. Player 1 will chose tails in a tie and player 2 will chose heads.
+
+Figures 1-4 show the estimated probability of the other player choosing the heads strategy under the statistical mixed strategy, for both players under all possible starting strategies.
+
+Here follows the python implementation of the Matching Pennies Game:
+
+\lstinputlisting[language=Python, caption=question3.py]
+{question3.py}
+
+\begin{figure}[h]
+  \caption{Player 1: Started with Heads, Player 2: Started with Heads}
+  \centering
+  \includegraphics[width=0.5\textwidth]{hh}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Player 1: Started with Heads, Player 2: Started with Tails}
+  \centering
+  \includegraphics[width=0.5\textwidth]{ht}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Player 1: Started with Tails, Player 2: Started with Heads}
+  \centering
+  \includegraphics[width=0.5\textwidth]{th}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Player 1: Started with Tails, Player 2: Started with Tails}
+  \centering
+  \includegraphics[width=0.5\textwidth]{tt}
+\end{figure}
+
+\section{}
+
+\subsection*{(a)}
+
+To show that there exists a strategy $x_1$ for player 1 that, if commited to, will increase their payoff to strictly greater than 6, first note that player 2 will respond with pure strategy 2 whenever $x_1(2) > x_1(1)$, as this will maximise their expected payoff. In the case of $x_1 = (0.25, 0.75)$ the expected payoff is player 2 chooses strategy 1 will be 2.25 and 2.75 for strategy 2. Now also note that, given player 2 is playing pure strategy 2, the expected payoff for player 1 will always be strictly greater than 6 by playing strategy 1 with non-zero probability, hence all mixed strategies $$x_1 \quad s.t. \quad x_1(1) > 0, x_1(2) > x_1(1)$$ achieve a payoff $> 6$.
+
+\subsection*{(b)}
+
+Based on the above reasoning and the new information about player 2's 'kind' strategy in the indifferent case, it is clear that the mixed strategy that maximises player 1's payoff is the one where he plays strategy 1 with the highest probability under the new conditions $$x_1 \quad s.t. \quad x_1(1) > 0, x_1(2) \geq x_1(1)$$, which is $x_1 = (0.5, 0.5)$.
+
+\subsection*{(c)}
+
+
 
 \end{document}
